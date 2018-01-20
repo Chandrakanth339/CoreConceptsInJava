@@ -24,7 +24,7 @@ public class MethodOverLoading {
 	private final void overLoadingMethod(String str1, int int1) throws Exception {
 
 	}
-
+	
 	/*
 	 * Access - visibility increased Argument datatypes changed, returntype changed
 	 * Allowed (No compilation Error)

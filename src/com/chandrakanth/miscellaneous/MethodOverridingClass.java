@@ -1,5 +1,7 @@
 package com.chandrakanth.miscellaneous;
 
+import java.io.FileNotFoundException;
+
 public class MethodOverridingClass extends MethodOverriddenClass {
 
 	private static final MethodOverridingClass mORDNG = new MethodOverridingClass();
@@ -27,7 +29,7 @@ public class MethodOverridingClass extends MethodOverriddenClass {
 	 *  - cannot have void return type , when actual method is returning the value
 	*/
 	@Override
-	public String bing() {
+	public String bing() throws FileNotFoundException{
 		return "2" ;
 	}
 	

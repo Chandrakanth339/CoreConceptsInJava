@@ -17,7 +17,7 @@ public class MethodOverriddenClass {
 	}
 
 	// if this method is marked final, then the subclass cannot override this method
-	public /*final*/ /*static*/ String bing() throws FileNotFoundException{
+	public /*final*/ String bing() throws FileNotFoundException{
 		return CONSTANT_FIELD;
 	}
 
