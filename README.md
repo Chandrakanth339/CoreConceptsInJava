@@ -1,2 +1,2 @@
-# GenericsInJava
-Generics Implementations in Java
+# CoreConceptsInJava
+Core Concepts in Java
