@@ -3,7 +3,7 @@ package com.chandrakanth.miscellaneous;
 public class PrivateConstructor {
 
 	
-	private PrivateConstructor() {
+	public PrivateConstructor() {
 		
 	}
 	
