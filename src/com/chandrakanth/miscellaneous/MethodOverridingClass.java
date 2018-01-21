@@ -39,8 +39,8 @@ public class MethodOverridingClass extends MethodOverriddenClass {
 	 *  - cannot have void return type , when actual method is returning the value
 	*/
 	@Override
-	public String bing() throws FileNotFoundException{
-		return "CHILD" ;
+	public Integer bing() throws FileNotFoundException{
+		return /*"CHILD" ;*/ new Integer(4);
 	}
 	
 	
