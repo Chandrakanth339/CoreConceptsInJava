@@ -26,6 +26,7 @@ public class InstanceOfIsInstanceIsAssignableFrom {
 		 * 
 		 * */
 		System.out.println(b instanceof A);
+		System.out.println(null instanceof A);
 	}
 
 }
