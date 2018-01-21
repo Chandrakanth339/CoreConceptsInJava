@@ -9,6 +9,9 @@ public class ClassNotFoundExceptionSample {
 	public static void main(String argz[]) {
 		Class<?>/*Object*/ x;
 		try {
+			
+			/*NOTE: Whichever the exception we handle at compile time, are known to be Compile-Time
+			Exceptions*/
 			// Throws ClassNotFoundException - if no class is available in the classpath
 			/*Throws InstantiationException - 
 			 * if new instance does not exist for a given class, Enum for Example
