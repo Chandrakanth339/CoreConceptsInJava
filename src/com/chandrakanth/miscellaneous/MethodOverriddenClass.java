@@ -20,8 +20,8 @@ public class MethodOverriddenClass {
 	}
 
 	// if this method is marked final, then the subclass cannot override this method
-	public /*final*/ String bing() throws IOException{
-		return CONSTANT_FIELD;
+	public /*final*/ Number bing() throws IOException{
+		return /*CONSTANT_FIELD;*/ new Integer(3);
 	}
 
 	public static String returnStaticValue() { 

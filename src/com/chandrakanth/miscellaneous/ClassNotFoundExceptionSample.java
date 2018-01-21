@@ -36,7 +36,7 @@ public class ClassNotFoundExceptionSample {
 			 * referenced and that corresponding .class file is not available at runtime
 			 * this runtime exception is wrapped by ClassNotFoundException
 			 */
-			PrivateConstructor pvt = new PrivateConstructor();
+			PrivateConstructor pv = new PrivateConstructor();
 			logger.info(x.newInstance());
 		}
 		/*

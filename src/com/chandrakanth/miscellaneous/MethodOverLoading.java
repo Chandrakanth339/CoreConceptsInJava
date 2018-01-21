@@ -21,10 +21,10 @@ public class MethodOverLoading {
 	}
 
 	// Method to be overloaded
-	private final void overLoadingMethod(String str1, int int1) throws Exception {
-
+	private final Number overLoadingMethod(String str1, int int1) throws Exception {
+		return new Integer(20);
 	}
-	
+
 	/*
 	 * Access - visibility increased Argument datatypes changed, returntype changed
 	 * Allowed (No compilation Error)
