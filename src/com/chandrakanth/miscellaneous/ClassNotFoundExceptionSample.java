@@ -37,13 +37,13 @@ public class ClassNotFoundExceptionSample {
 			 * this runtime exception is wrapped by ClassNotFoundException
 			 */
 			PrivateConstructor pvt = new PrivateConstructor();
-
 			logger.info(x.newInstance());
-		} catch (ClassNotFoundException e) { // All these exceptions are compile-time exceptions
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
+		}
+		/* Applicable from Java 1.7 - we can combine exceptions as a single argument 
+		 * augmented with Binary OR operator, in case if the catch block has
+		 * same set of instructions for all such different exceptions
+		 */
+		catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 			e.printStackTrace();
 		}
 
