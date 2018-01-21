@@ -39,9 +39,10 @@ public class ClassNotFoundExceptionSample {
 			PrivateConstructor pvt = new PrivateConstructor();
 			logger.info(x.newInstance());
 		}
-		/* Applicable from Java 1.7 - we can combine exceptions as a single argument 
-		 * augmented with Binary OR operator, in case if the catch block has
-		 * same set of instructions for all such different exceptions
+		/*
+		 * Applicable from Java 1.7 - we can combine exceptions as a single argument
+		 * augmented with Binary OR operator, in case if the catch block has same set of
+		 * instructions for all such different exceptions
 		 */
 		catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 			e.printStackTrace();
