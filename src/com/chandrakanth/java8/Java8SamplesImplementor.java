@@ -6,9 +6,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.time.OffsetDateTime;
 import java.time.Period;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Set;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -16,7 +21,7 @@ import org.apache.log4j.Logger;
 public class Java8SamplesImplementor {
 
 	public static final Logger LOGGER = Logger.getLogger(Java8SamplesImplementor.class);
-	
+
 	public static void main(String[] argz) {
 		BasicConfigurator.configure();
 		/*
@@ -34,12 +39,12 @@ public class Java8SamplesImplementor {
 		// default method call defined in interface
 		LOGGER.info(sample.returnDefaultMethodObject("Default method arg"));
 
-		 Java8SamplesImplementor.localDateSamples();
-		 Java8SamplesImplementor.localTimeSamples();
-		 Java8SamplesImplementor.localDateTimeSamples();
-		 Java8SamplesImplementor.zonedDateTimeSamples();
-		 Java8SamplesImplementor.localDatesInPeriodAndDuration();
-//		 Java8SamplesImplementor.dateTimeFormats();
+//		Java8SamplesImplementor.localDateSamples();
+//		Java8SamplesImplementor.localTimeSamples();
+//		Java8SamplesImplementor.localDateTimeSamples();
+		Java8SamplesImplementor.zonedDateTimeSamples();
+//		Java8SamplesImplementor.localDatesInPeriodAndDuration();
+		// Java8SamplesImplementor.dateTimeFormats();
 	}
 
 	public static void localDateSamples() {
@@ -111,7 +116,13 @@ public class Java8SamplesImplementor {
 	}
 
 	public static void zonedDateTimeSamples() {
-
+		Set<String> zoneIds = ZoneId.getAvailableZoneIds();
+		zoneIds.forEach(s -> LOGGER.info(s));
+		ZonedDateTime zonedDateTime = ZonedDateTime.of(DateTime8.returnCurrentTimeStamp(), ZoneId.of("Indian/Cocos"));
+		System.out.println(zonedDateTime);
+		ZoneOffset zoneOffSet = ZoneOffset.of("+02:00");
+		OffsetDateTime offDT = OffsetDateTime.of(DateTime8.returnCurrentTimeStamp(), zoneOffSet);
+		System.out.println(offDT);
 	}
 
 	public static void localDatesInPeriodAndDuration() {
@@ -134,12 +145,11 @@ public class Java8SamplesImplementor {
 	public static void dateTimeFormats() {
 		LocalDate localDate = DateTime8.returnCurrentDate();
 		String formattedDate = localDate.format(DateTimeFormatter.ofPattern("MM-YYYY-dd"));
-		
+
 		LocalDateTime localDateTime = DateTime8.returnCurrentTimeStamp();
 		String timeStampFormat = localDateTime.format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
 		LOGGER.info(timeStampFormat);
-		
-		
+
 		LOGGER.info(formattedDate);
 	}
 
