@@ -18,7 +18,7 @@ public class RegEx1 {
 	private static List<String> regxArray = new ArrayList<>();
 	private static final String START = " --  start";
 	private static final String END = " -- end";
-
+	private static final String _N = "\n";
 	public static void main(String[] argz) {
 		// genericPatternMatching();
 		 orOperator();
@@ -42,6 +42,7 @@ public class RegEx1 {
 		charSeqArray.addAll(Arrays.asList("asdjkdf", "", "a", " ", "bb"));
 		patternMatcher();
 		LOGGER.info("Generic Matchers - \\S \\W \\D \\B" + END);
+		LOGGER.info(_N);
 		clearAll();
 	}
 
@@ -78,15 +79,16 @@ public class RegEx1 {
 				"ass", "azeesa bsaa", "ap"));
 		// patternMatcher();
 		LOGGER.info("Generic Pattern matching" + END);
+		LOGGER.info(_N);
 		clearAll();
 
 	}
 
 	private static final void orOperator() {
-		LOGGER.info("OR Operator -1\t" + Pattern.matches("[a|b|c]", "c"));
-		LOGGER.info("OR Operator -2\t" + Pattern.matches("[a[b][c]]", "c"));
-		LOGGER.info("OR Operator -3\t" + Pattern.matches("[amn[d]]", "d")
-				+ "\n");
+		regxArray.addAll(Arrays.asList("[a|b|c]","[a[b][c]]","[amn[d]]","[.]"));
+		charSeqArray.addAll(Arrays.asList("c","d","a","qr","s"));
+		patternMatcher();
+//		LOGGER.info(_N);
 	}
 
 	private static final void quantifierMatching() {
