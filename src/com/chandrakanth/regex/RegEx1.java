@@ -21,11 +21,11 @@ public class RegEx1 {
 
 	public static void main(String[] argz) {
 		// genericPatternMatching();
-		// orOperator();
+		 orOperator();
 		// exceptMatching();
 		// quantifierMatching();
 		// exponentExpression();
-		specialCharacterRegx();
+		// specialCharacterRegx();
 	}
 
 	private static final void specialCharacterRegx() {
@@ -36,11 +36,13 @@ public class RegEx1 {
 		// patternMatcher();
 		LOGGER.info("Generic Matchers - \\s \\w \\d \\b" + END);
 		clearAll();
+
 		LOGGER.info("Generic Matchers - \\S \\W \\D \\B" + START);
 		regxArray.addAll(Arrays.asList("\\S", "\\W", "\\D", "\\B"));
-		charSeqArray.addAll(Arrays.asList("asdjkdf", "","a", " "));
+		charSeqArray.addAll(Arrays.asList("asdjkdf", "", "a", " ", "bb"));
 		patternMatcher();
 		LOGGER.info("Generic Matchers - \\S \\W \\D \\B" + END);
+		clearAll();
 	}
 
 	private static void patternMatcher() {
