@@ -3,6 +3,7 @@ package com.chandrakanth.collections;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -146,7 +147,6 @@ public class CollectionsClass {
 		System.out.println(queue.peek());
 		
 		Map<K,V> map = new HashMap<K,V>();
-		
-
+	
 	}
 }

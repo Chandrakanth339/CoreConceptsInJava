@@ -4,16 +4,16 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
-public class MethodOverriddenClass {
+public class MethodSubjToOverriding {
 
-	private static final Logger logger = Logger.getLogger(MethodOverriddenClass.class);
+	private static final Logger logger = Logger.getLogger(MethodSubjToOverriding.class);
 
 	private static final String CONSTANT_FIELD = "PARENT";
 
 	
 	
 	
-	private static MethodOverriddenClass mOR = new MethodOverriddenClass();
+	private static MethodSubjToOverriding mOR = new MethodSubjToOverriding();
 
 	public static void main(String[] argz) throws Exception{
 //		logger.info(mOR.bing());

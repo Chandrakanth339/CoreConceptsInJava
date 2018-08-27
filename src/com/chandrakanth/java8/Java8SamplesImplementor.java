@@ -14,6 +14,8 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Set;
+import java.util.function.IntSupplier;
+import java.util.function.Supplier;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -39,12 +41,23 @@ public class Java8SamplesImplementor {
 		// default method call defined in interface
 		LOGGER.info(sample.returnDefaultMethodObject("Default method arg"));
 
+		
+		LOGGER.info("----------------------Date Time Implementors--------------------");
 //		Java8SamplesImplementor.localDateSamples();
 //		Java8SamplesImplementor.localTimeSamples();
 //		Java8SamplesImplementor.localDateTimeSamples();
 		Java8SamplesImplementor.zonedDateTimeSamples();
 //		Java8SamplesImplementor.localDatesInPeriodAndDuration();
 		// Java8SamplesImplementor.dateTimeFormats();
+		LOGGER.info("----------------------Date Time Implementors--------------------");
+	
+	LOGGER.info("##########################Supplier and Consumer###############################");
+	Supplier<SupplierPojo> supplier = () -> {return new SupplierPojo("String", 4, 4l);};
+	IntSupplier intSupplier = () ->{return new Integer(4);};
+	LOGGER.info(intSupplier.getAsInt());
+	SupplierPojo sP = supplier.get();
+	LOGGER.info(sP.getIntV()+"\t"+sP.getL()+"\t"+sP.getStr());
+	LOGGER.info("##########################Supplier and Consumer###############################");
 	}
 
 	public static void localDateSamples() {

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.TreeSet;
 
 public class ComparatorClass {
 
@@ -31,6 +32,11 @@ public class ComparatorClass {
 			}
 
 		});
+		
+		
+		
+		
+		
 		System.out.println("\n");
 		System.out.println("sorting list based on strings");
 
@@ -51,7 +57,14 @@ public class ComparatorClass {
 
 		for (Class1 a : list) // printing the sorted list of ages
 			System.out.print(a.getNumber1() + " : " + a.getString1() + "\n");
+	
+	
 
+		TreeSet trSet  =new TreeSet();
+		trSet.add(new String("3"));
+		trSet.add(new Integer(2));
+		
+		System.out.println(trSet);
+	
 	}
-
 }

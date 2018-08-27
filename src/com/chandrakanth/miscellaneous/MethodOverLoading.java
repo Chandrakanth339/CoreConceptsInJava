@@ -10,7 +10,8 @@ public class MethodOverLoading {
 
 	public static void main(String[] args) {
 		try {
-			mL.logger.info("Method invocations for different overloaded methods");
+			mL.logger
+					.info("Method invocations for different overloaded methods");
 			mL.logger.info(mL.overLoadingMethod("", Integer.valueOf(3)));
 			mL.overLoadingMethod("", 1);
 			mL.logger.info(mL.overLoadingMethod("", Integer.valueOf(3)));
@@ -21,13 +22,14 @@ public class MethodOverLoading {
 	}
 
 	// Method to be overloaded
-	private final Number overLoadingMethod(String str1, int int1) throws Exception {
+	private final Number overLoadingMethod(String str1, int int1)
+			throws Exception {
 		return new Integer(20);
 	}
 
 	/*
-	 * Access - visibility increased Argument datatypes changed, returntype changed
-	 * Allowed (No compilation Error)
+	 * Access - visibility increased Argument datatypes changed, returntype
+	 * changed Allowed (No compilation Error)
 	 */
 	Integer overLoadingMethod(String str1, Integer integerValue) {
 		return integerValue;
@@ -43,7 +45,13 @@ public class MethodOverLoading {
 	/*
 	 * static keyword added - Allowed
 	 */
-	static double overLoadingMethod(String str2, Double doubleVal) throws Exception {
+	static double overLoadingMethod(String str2, Double doubleVal)
+			throws Exception {
+		return doubleVal;
+	}
+
+	static final Number overLoadingMethod(String str2, Number doubleVal)
+			throws Exception {
 		return doubleVal;
 	}
 

@@ -1,4 +1,4 @@
-package com.chandrakanth.json;
+/*package com.chandrakanth.json;
 
 import java.io.File;
 import java.io.FileReader;
@@ -12,10 +12,10 @@ import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-/**
+*//**
  * @author sai
  *
- */
+ *//*
 public class JSONSimple {
 
 	private static JSONParser jsonParser = new JSONParser();
@@ -43,11 +43,11 @@ public class JSONSimple {
 			
 
 			// fileWriter.write(ENUMConstants.ARRAY.getStringValue());
-			/*
+			
 			 * if (Boolean.valueOf(String.valueOf(fileReader.read()))) {
 			 * fileWriter.append("\n".toString()).append(ENUMConstants.ARRAY.
 			 * getStringValue()); fileWriter.flush(); }
-			 */
+			 
 
 			JSONArray jsonArray = (JSONArray) jsonParser.parse(ENUMConstants.ARRAY.getStringValue());
 
@@ -59,7 +59,7 @@ public class JSONSimple {
 			}
 
 		} 
-		/*finally {
+		finally {
 			try {
 
 				fileWriter.close();
@@ -68,7 +68,7 @@ public class JSONSimple {
 					logger.debug(ENUMConstants.ERROR.getStringValue() + e);
 				}
 			}
-		}*/
+		}
 
 	}
 
@@ -92,50 +92,51 @@ public class JSONSimple {
 			this.stringValue2 = val3;
 		}
 
-		/**
+		*//**
 		 * @return the integerValue
-		 */
+		 *//*
 		public int getIntegerValue() {
 			return integerValue;
 		}
 
-		/**
+		*//**
 		 * @param integerValue
 		 *            the integerValue to set
-		 */
+		 *//*
 		void setIntegerValue(int integerValue) {
 			this.integerValue = integerValue;
 		}
 
-		/**
+		*//**
 		 * @return the stringValue
-		 */
+		 *//*
 		String getStringValue() {
 			return stringValue;
 		}
 
-		/**
+		*//**
 		 * @param stringValue
 		 *            the stringValue to set
-		 */
+		 *//*
 		void setStringValue(String stringValue) {
 			this.stringValue = stringValue;
 		}
 
-		/**
+		*//**
 		 * @return the stringValue2
-		 */
+		 *//*
 		public String getStringValue2() {
 			return stringValue2;
 		}
 
-		/**
+		*//**
 		 * @param stringValue2
 		 *            the stringValue2 to set
-		 */
+		 *//*
 		void setStringValue2(String stringValue2) {
 			this.stringValue2 = stringValue2;
 		}
 	}
 
 }
+*/

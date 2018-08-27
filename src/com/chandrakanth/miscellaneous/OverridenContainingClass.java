@@ -3,17 +3,17 @@ package com.chandrakanth.miscellaneous;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class MethodOverridingClass extends MethodOverriddenClass {
+public class OverridenContainingClass extends MethodSubjToOverriding {
 
-	private static final MethodOverridingClass mORDNG = new MethodOverridingClass();
+	private static final OverridenContainingClass mORDNG = new OverridenContainingClass();
 
 	public static void main(String argz[]) throws IOException {
 //		System.out.println(mORDNG.returnStaticValue());
-		MethodOverriddenClass mOVRDN = new MethodOverridingClass();
+		MethodSubjToOverriding mOVRDN = new OverridenContainingClass();
 		System.out.println(mOVRDN.returnStaticValue());
-		System.out.println(MethodOverriddenClass.returnStaticValue());
-		System.out.println(MethodOverridingClass.returnStaticValue());
-		MethodOverriddenClass mOVC = new MethodOverridingClass();
+		System.out.println(MethodSubjToOverriding.returnStaticValue());
+		System.out.println(OverridenContainingClass.returnStaticValue());
+		MethodSubjToOverriding mOVC = new OverridenContainingClass();
 		System.out.println(mOVC.bing());
 	
 	}
