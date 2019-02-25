@@ -55,6 +55,6 @@ public class NormalClass {
 	@SuppressWarnings("static-access")
 	public void setOldString(String oldString) {
 		this.oldString = oldString;
-	}
+	} 
 
 }
